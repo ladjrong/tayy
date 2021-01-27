@@ -4,7 +4,7 @@ import setuptools
 
 setuptools.setup(
     name="tayy", # Replace with your own username
-    version="11.0.1",
+    version="11.1.1",
     author="wing",
     author_email="100102888@qq.com",
     description="A small example package",
