@@ -42,8 +42,8 @@ class remoteLog():
             return data
         except:
             print("连接失败")
-def dgta(url_a,execution_time):
-    a = remoteLog(__file__)
+def dgta(f,url_a,execution_time):
+    a = remoteLog(f)
     a.log(url_a,execution_time)
     return a
 
