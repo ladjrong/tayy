@@ -34,6 +34,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Documents\GitHub\tayy\tayy" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="text" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="tayy" />
@@ -74,7 +79,7 @@
       <workItem from="1611638915837" duration="486000" />
       <workItem from="1611639470639" duration="3273000" />
       <workItem from="1611704835376" duration="1100000" />
-      <workItem from="1611706564102" duration="1958000" />
+      <workItem from="1611706564102" duration="2668000" />
     </task>
     <servers />
   </component>
