@@ -2,11 +2,18 @@ import socket
 import datetime
 import requests
 import json
+
 class remoteLog():
+
+    def get_dynamic_filename(self):
+        exec("print(__file__)")
 
     def __init__(self,scriptname=None):
         self.scriptname = scriptname
         self.url = 'http://127.0.0.1'
+        self.test = 'abced'
+
+
 
     def set_url(self,url):
         self.url = url
@@ -33,21 +40,28 @@ class remoteLog():
         return a
 
     def log(self,url,execution_tb):
-        try:
-            data = {'script_update':datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                    'ip':str(self.get_ip()),'location':self.get_scriptname(),"script_name":self.Script_name()[-1],"execution_time":execution_tb,
-                    }
-            data_a = json.dumps(data)
-            a=requests.post(url, data_a)
-            return data
-        except:
-            print("连接失败")
+            try:
+                data = {'script_update':datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                        'ip':str(self.get_ip()),'location':self.get_scriptname(),"script_name":self.Script_name()[-1],"execution_time":execution_tb,
+                        }
+                data_a = json.dumps(data)
+                a=requests.post(url, data_a)
+                return ({"msg":"信息发送成功","code":0})
+            except:
+                return ({"msg":"信息发送失败","code":1})
+
 def dgta(f,url_a,execution_time):
     try:
         a = remoteLog(f)
-        a.log(url_a,execution_time)
+        msg=a.log(url_a, execution_time)
+
+        return msg
+
     except:
-        print("获取信息失败")
+        return ({"msg": "获取硬件信息失败", "code": 0})
+
+
+
 
 
 
