@@ -46,9 +46,9 @@ class remoteLog():
                         }
                 data_a = json.dumps(data)
                 a=requests.post(url, data_a,timeout=5)
-                return ({"msg":"信息发送成功","code":0})
+                print("脚本监测服务器：连接失败")
             except:
-                return ({"msg":"信息发送失败","code":1})
+                return ("脚本监测服务器：连接失败")
 
 def dgta(f,url_a,execution_time):
     try:
