@@ -45,10 +45,10 @@ class remoteLog():
                         'ip':str(self.get_ip()),'location':self.get_scriptname(),"script_name":self.Script_name()[-1],"execution_time":execution_tb,
                         }
                 data_a = json.dumps(data)
-                a=requests.post(url, data_a)
-                return ({"msg":"信息发送成功","code":0})
+                a=requests.post(url, data_a,timeout=5)
+                print("脚本监测服务器：连接失败")
             except:
-                return ({"msg":"信息发送失败","code":1})
+                return ("脚本监测服务器：连接失败")
 
 def dgta(f,url_a,execution_time):
     try:
@@ -60,8 +60,10 @@ def dgta(f,url_a,execution_time):
     except:
         return ({"msg": "获取硬件信息失败", "code": 0})
 
+if __name__ == '__main__':
 
-
+    a=dgta(__file__,"http:219.130.112.112:8888/post_sp",60)
+    print(a)
 
 
 
