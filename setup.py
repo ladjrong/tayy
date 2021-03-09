@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 import setuptools
-import tayy
 setuptools.setup(
     name="tayy", # Replace with your own username
-    version="13.1.0",
+    version="13.2.0",
     author="wing",
     author_email="100102888@qq.com",
     description="A small example package",
