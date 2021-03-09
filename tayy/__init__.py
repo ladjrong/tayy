@@ -46,9 +46,9 @@ class remoteLog():
                         }
                 data_a = json.dumps(data)
                 a=requests.post(url, data_a,timeout=5)
-                print("脚本监测服务器：连接失败")
+                print("脚本监测服务器连接失败")
             except:
-                return ("脚本监测服务器：连接失败")
+                print("脚本监测服务器连接失败")
 
 def dgta(f,url_a,execution_time):
     try:
@@ -58,11 +58,11 @@ def dgta(f,url_a,execution_time):
         return msg
 
     except:
-        return ({"msg": "获取硬件信息失败", "code": 0})
+        print("脚本监测服务器获取硬件失败")
 
 if __name__ == '__main__':
 
-    a=dgta(__file__,"http:219.130.112.112:8888/post_sp",60)
+    a=dgta(__file__,"url",60)
     print(a)
 
 
