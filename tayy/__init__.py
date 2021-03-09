@@ -46,7 +46,7 @@ class remoteLog():
                         }
                 data_a = json.dumps(data)
                 a=requests.post(url, data_a,timeout=5)
-                print("脚本监测服务器连接失败")
+
             except:
                 print("脚本监测服务器连接失败")
 
